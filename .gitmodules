@@ -1,0 +1,10 @@
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = http://github.com/scrooloose/syntastic.git
+[submodule "bundle/jshint"]
+	path = bundle/jshint
+    url = http://github.com/walm/jshint.vim.git
+    ignore = untracked
