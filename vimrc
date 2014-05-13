@@ -105,19 +105,19 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
-
 if &term =~ "xterm"
-  "256 color --
-  let &t_Co=256
-  " restore screen after quitting
-  set t_ti=ESC7ESC[rESC[?47h t_te=ESC[?47lESC8
-  if has("terminfo")
-    let &t_Sf="\ESC[3%p1%dm"
-    let &t_Sb="\ESC[4%p1%dm"
-  else
-    let &t_Sf="\ESC[3%dm"
-    let &t_Sb="\ESC[4%dm"
-  endif
+    " 256 colors
+    let &t_Co = 256
+    " restore screen after quitting
+    let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
+    let &t_te = "\<Esc>[?47l\<Esc>8"
+    if has("terminfo")
+        let &t_Sf = "\<Esc>[3%p1%dm"
+        let &t_Sb = "\<Esc>[4%p1%dm"
+    else
+        let &t_Sf = "\<Esc>[3%dm"
+        let &t_Sb = "\<Esc>[4%dm"
+    endif
 endif
 
 colorscheme distinguished
